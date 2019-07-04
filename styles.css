@@ -1,0 +1,209 @@
+/*GLOBAL STYLES*/
+
+body {
+    font-family: 'Lato', sans-serif;
+    font-size: 1.2em;
+  } 
+  
+  #header-img {
+    max-width: 55px;
+    max-height: 55px;
+  }
+  
+  a {
+    text-decoration: none;
+    color: #FFFFFA;
+  }
+  
+  ul {
+    list-style: none;
+  }
+  
+  li {
+    padding: 10px;
+  }
+  
+  nav li,
+  footer li{
+    display: inline;
+  }
+  
+  header h1 {
+    color:#FFFFFA;
+    padding-left: 8px;
+  }
+  
+  span {
+    font-weight: bold;
+    color: #78CDD7;
+    border-bottom: 2px solid #247B7B;
+  }
+  
+  h2{
+    color: #247B7B;
+    font-size: 1.5em;
+  }
+  
+  input {
+    padding: 10px;
+    width: 150px;
+    border-radius: 15px;
+  }
+  
+  label {
+    padding: 10px;
+    margin: 5px;
+  }
+  
+  #submit {
+    background-color: #78CDD7;
+    color: #FFFFFA;
+    height: 35px;
+    padding: 5px;
+    font-size: 1em;
+    text-transform: uppercase;
+    cursor: pointer;
+    margin : 5px;
+    border-radius: 45px;
+  }
+  
+  .testimony {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    margin: 10px;
+    border: 1px solid grey;
+    border-radius: 3px;
+    background-color: #78CDD7;
+    color: #FFFFFA;
+    padding: 10px;
+  }
+  /*CSS GRID*/
+  
+  .container {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: auto auto auto auto auto auto;
+    grid-template-areas:
+      "h h h"
+      "f f f"
+      "how how how"
+      "t t t"
+      "s s s"
+      "footer footer footer";
+    grid-gap: 10px;
+  }
+  
+  #header {
+    grid-area: h;
+    display: flex;
+    background-color: #0D5C63;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    top: 0;
+    left: 0;
+    position: fixed;
+  }
+  
+  #features {
+    grid-area: f;
+    margin-top: 70px;
+    place-self: center;
+  }
+  
+  #how-it-works {
+    grid-area: how;
+    margin: 0 auto;
+  }
+  
+  #testimonials  {
+    display: flex;
+    grid-area: t;
+    place-self: center;
+    align-items: center;
+    text-align: center;
+  }
+  
+  #signup{
+    grid-area: s;
+    place-self: center;
+    margin-bottom: 50px;
+  }
+  
+  #footer {
+    grid-area: footer;
+    display: flex;
+    background-color: #0D5C63;
+    align-items: center;
+    justify-content: flex-end;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    position: fixed;
+  }
+  
+  /*MEDIA QUERY*/
+  
+  @media (max-width: 810px) {
+    #features {
+       margin-top: 100px;
+    }
+    
+    #header {
+    grid-area: h;
+    display: flex;
+    background-color: #0D5C63;
+   width: 100%;
+    top: 0;
+    left: 0;
+   position: fixed; 
+  }
+  
+    .container {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto;
+    grid-template-areas:
+      "h"
+      "f"
+      "how"
+      "t"
+      "s"
+      "footer";
+    grid-gap: 10px;
+  }
+    #header {
+   justify-content: space-evenly;
+    }
+    
+    nav li {
+      display: none;
+    }
+  }
+  
+  @media(max-width:767px){
+    body{
+      font-size: 1.0em;
+    }
+    #testimonials  {
+    display: grid;
+  }
+  }
+  
+  @media (max-width: 500px){
+    body{
+      font-size: .7em;
+      word-wrap: break-word;
+    }
+    iframe{
+      width: 350px;
+    }
+    
+    #signup{
+      display: grid;
+    }
+    
+  }
+  
